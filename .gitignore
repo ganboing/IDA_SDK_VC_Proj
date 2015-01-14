@@ -1,0 +1,9 @@
+IDASDK/
+*.sdf
+*.opensdf
+*.suo
+*/*/Debug/
+*/*/Release/
+*/*/*.vcxproj.filters
+*/*/*.vcxproj.user
+
