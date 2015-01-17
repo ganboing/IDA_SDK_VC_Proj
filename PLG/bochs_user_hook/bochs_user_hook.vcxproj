@@ -41,7 +41,7 @@
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v120_xp</PlatformToolset>
-    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
     <CharacterSet>NotSet</CharacterSet>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
@@ -87,14 +87,14 @@
     <PostBuildEvent>
       <Command>copy /Y $(TargetDir)\$(TargetName).dll z:\backup\
 copy /Y $(TargetDir)\$(TargetName).pdb z:\backup\
-copy /Y ..\..\IDASDK\plugins\bochs_user\bochs_user.cpp z:\backup\bochs_user.cpp
-copy /Y ..\..\IDASDK\plugins\bochs_user\HookIAT.cpp z:\backup\HookIAT.cpp
-copy /Y ..\..\IDASDK\plugins\bochs_user\krnl32_hook.cpp z:\backup\krnl32_hook.cpp
-copy /Y ..\..\IDASDK\plugins\bochs_user\exception_clause.cpp z:\backup\exception_clause.cpp
-copy /Y ..\..\IDASDK\plugins\bochs_user\dbgprintf.cpp z:\backup\dbgprintf.cpp
-copy /Y ..\..\IDASDK\plugins\bochs_user\dbgprintf.h z:\backup\dbgprintf.h
-copy /Y ..\..\IDASDK\plugins\bochs_user\bochsUserImplHook.cpp z:\backup\bochsUserImplHook.cpp
-copy /Y ..\..\IDASDK\plugins\bochs_user\IdaWllHook.cpp z:\backup\IdaWllHook.cpp
+copy /Y ..\..\IDASDK\plugins\bochs_user\bochs_user.cpp z:\backup\bochs_user\bochs_user.cpp
+copy /Y ..\..\IDASDK\plugins\bochs_user\HookIAT.cpp z:\backup\bochs_user\HookIAT.cpp
+copy /Y ..\..\IDASDK\plugins\bochs_user\krnl32_hook.cpp z:\backup\bochs_user\krnl32_hook.cpp
+copy /Y ..\..\IDASDK\plugins\bochs_user\exception_clause.cpp z:\backup\bochs_user\exception_clause.cpp
+copy /Y ..\..\IDASDK\plugins\bochs_user\dbgprintf.cpp z:\backup\bochs_user\dbgprintf.cpp
+copy /Y ..\..\IDASDK\plugins\bochs_user\dbgprintf.h z:\backup\bochs_user\dbgprintf.h
+copy /Y ..\..\IDASDK\plugins\bochs_user\bochsUserImplHook.cpp z:\backup\bochs_user\bochsUserImplHook.cpp
+copy /Y ..\..\IDASDK\plugins\bochs_user\IdaWllHook.cpp z:\backup\bochs_user\IdaWllHook.cpp
 
 </Command>
     </PostBuildEvent>
