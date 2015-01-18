@@ -60,7 +60,6 @@ copy /Y ..\..\IDASDK\module\i0\emu.cpp z:\ana\</Command>
     <ClCompile Include="..\..\IDASDK\lib\i0_ida_common\i0_ida_common_lib.cpp" />
     <ClCompile Include="..\..\IDASDK\module\i0\ana.cpp" />
     <ClCompile Include="..\..\IDASDK\module\i0\emu.cpp" />
-    <ClCompile Include="..\..\idasdk\module\i0\i0_instr.cpp" />
     <ClCompile Include="..\..\IDASDK\module\i0\ins.cpp" />
     <ClCompile Include="..\..\IDASDK\module\i0\out.cpp" />
     <ClCompile Include="..\..\IDASDK\module\i0\reg.cpp" />
