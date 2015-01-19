@@ -32,13 +32,14 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
-      <WarningLevel>Level3</WarningLevel>
+      <WarningLevel>Level4</WarningLevel>
       <PrecompiledHeader>
       </PrecompiledHeader>
       <Optimization>Disabled</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;I064_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -53,7 +54,8 @@ copy /Y ..\..\IDASDK\module\i0\reg.cpp z:\ana\
 copy /Y ..\..\IDASDK\module\i0\out.cpp z:\ana\
 copy /Y ..\..\IDASDK\module\i0\ins.cpp z:\ana\
 copy /Y ..\..\IDASDK\module\i0\ana.cpp z:\ana\
-copy /Y ..\..\IDASDK\module\i0\emu.cpp z:\ana\</Command>
+copy /Y ..\..\IDASDK\module\i0\emu.cpp z:\ana\
+copy /Y ..\..\IDASDK\module\i0\i0_instr.cpp z:\ana\</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
