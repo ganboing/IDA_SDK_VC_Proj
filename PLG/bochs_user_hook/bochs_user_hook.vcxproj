@@ -6,31 +6,6 @@
       <Platform>Win32</Platform>
     </ProjectConfiguration>
   </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="..\..\IDASDK\plugins\bochs_user\BochsUserImplHook.cpp" />
-    <ClCompile Include="..\..\IDASDK\plugins\bochs_user\bochs_user.cpp" />
-    <ClCompile Include="..\..\IDASDK\plugins\bochs_user\DbgPrintf.cpp" />
-    <ClCompile Include="..\..\IDASDK\plugins\bochs_user\exception_clause.cpp" />
-    <ClCompile Include="..\..\IDASDK\plugins\bochs_user\HookIAT.cpp" />
-    <ClCompile Include="..\..\IDASDK\plugins\bochs_user\IdaWllHook.cpp" />
-    <ClCompile Include="..\..\IDASDK\plugins\bochs_user\krnl32_hook.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\..\IDASDK\plugins\bochs_user\asm_stub.h" />
-    <ClInclude Include="..\..\IDASDK\plugins\bochs_user\BochsUserImplHook.h" />
-    <ClInclude Include="..\..\IDASDK\plugins\bochs_user\DbgPrintf.h" />
-    <ClInclude Include="..\..\IDASDK\plugins\bochs_user\EnumToString.h" />
-    <ClInclude Include="..\..\IDASDK\plugins\bochs_user\exception_clause.h" />
-    <ClInclude Include="..\..\IDASDK\plugins\bochs_user\exception_clause_hooks.h" />
-    <ClInclude Include="..\..\IDASDK\plugins\bochs_user\global.h" />
-    <ClInclude Include="..\..\IDASDK\plugins\bochs_user\global_win.h" />
-    <ClInclude Include="..\..\IDASDK\plugins\bochs_user\HookIAT.h" />
-    <ClInclude Include="..\..\IDASDK\plugins\bochs_user\IdaWllHook.h" />
-    <ClInclude Include="..\..\IDASDK\plugins\bochs_user\krnl32_hook.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <MASM Include="..\..\IDASDK\plugins\bochs_user\stub.asm" />
-  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{C997ED4F-1F5C-4867-AB8D-0DABCCDADA98}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
@@ -41,7 +16,7 @@
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v120_xp</PlatformToolset>
-    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
     <CharacterSet>NotSet</CharacterSet>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
@@ -50,7 +25,7 @@
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="..\..\idaplg61_x86.props" />
+    <Import Project="$(SolutionDir)\idaplg61_x86.props" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -65,7 +40,7 @@
       <Optimization>Disabled</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;BOCHS_USER_HOOK_EXPORTS;NO_OBSOLETE_FUNCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>NO_OBSOLETE_FUNCS;WIN32;NDEBUG;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StringPooling>true</StringPooling>
       <ExceptionHandling>Async</ExceptionHandling>
       <BufferSecurityCheck>false</BufferSecurityCheck>
@@ -81,24 +56,33 @@
       <OptimizeReferences>false</OptimizeReferences>
       <AdditionalDependencies>Dbghelp.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
-      <EntryPointSymbol>
-      </EntryPointSymbol>
     </Link>
-    <PostBuildEvent>
-      <Command>copy /Y $(TargetDir)\$(TargetName).dll z:\backup\
-copy /Y $(TargetDir)\$(TargetName).pdb z:\backup\
-copy /Y ..\..\IDASDK\plugins\bochs_user\bochs_user.cpp z:\backup\bochs_user.cpp
-copy /Y ..\..\IDASDK\plugins\bochs_user\HookIAT.cpp z:\backup\HookIAT.cpp
-copy /Y ..\..\IDASDK\plugins\bochs_user\krnl32_hook.cpp z:\backup\krnl32_hook.cpp
-copy /Y ..\..\IDASDK\plugins\bochs_user\exception_clause.cpp z:\backup\exception_clause.cpp
-copy /Y ..\..\IDASDK\plugins\bochs_user\dbgprintf.cpp z:\backup\dbgprintf.cpp
-copy /Y ..\..\IDASDK\plugins\bochs_user\dbgprintf.h z:\backup\dbgprintf.h
-copy /Y ..\..\IDASDK\plugins\bochs_user\bochsUserImplHook.cpp z:\backup\bochsUserImplHook.cpp
-copy /Y ..\..\IDASDK\plugins\bochs_user\IdaWllHook.cpp z:\backup\IdaWllHook.cpp
-
-</Command>
-    </PostBuildEvent>
   </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="$(SolutionDir)\IDASDK\plugins\ida_bochs_debugger\ida_impl_analysis\BochsUserImplHook.cpp" />
+    <ClCompile Include="$(SolutionDir)\IDASDK\plugins\ida_bochs_debugger\ida_impl_analysis\bochs_user.cpp" />
+    <ClCompile Include="$(SolutionDir)\IDASDK\plugins\ida_bochs_debugger\ida_impl_analysis\DbgPrintf.cpp" />
+    <ClCompile Include="$(SolutionDir)\IDASDK\plugins\ida_bochs_debugger\ida_impl_analysis\exception_clause.cpp" />
+    <ClCompile Include="$(SolutionDir)\IDASDK\plugins\ida_bochs_debugger\ida_impl_analysis\HookIAT.cpp" />
+    <ClCompile Include="$(SolutionDir)\IDASDK\plugins\ida_bochs_debugger\ida_impl_analysis\IdaWllHook.cpp" />
+    <ClCompile Include="$(SolutionDir)\IDASDK\plugins\ida_bochs_debugger\ida_impl_analysis\krnl32_hook.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(SolutionDir)\IDASDK\plugins\ida_bochs_debugger\ida_impl_analysis\asm_stub.h" />
+    <ClInclude Include="$(SolutionDir)\IDASDK\plugins\ida_bochs_debugger\ida_impl_analysis\BochsUserImplHook.h" />
+    <ClInclude Include="$(SolutionDir)\IDASDK\plugins\ida_bochs_debugger\ida_impl_analysis\DbgPrintf.h" />
+    <ClInclude Include="$(SolutionDir)\IDASDK\plugins\ida_bochs_debugger\ida_impl_analysis\EnumToString.h" />
+    <ClInclude Include="$(SolutionDir)\IDASDK\plugins\ida_bochs_debugger\ida_impl_analysis\exception_clause.h" />
+    <ClInclude Include="$(SolutionDir)\IDASDK\plugins\ida_bochs_debugger\ida_impl_analysis\exception_clause_hooks.h" />
+    <ClInclude Include="$(SolutionDir)\IDASDK\plugins\ida_bochs_debugger\ida_impl_analysis\global.h" />
+    <ClInclude Include="$(SolutionDir)\IDASDK\plugins\ida_bochs_debugger\ida_impl_analysis\global_win.h" />
+    <ClInclude Include="$(SolutionDir)\IDASDK\plugins\ida_bochs_debugger\ida_impl_analysis\HookIAT.h" />
+    <ClInclude Include="$(SolutionDir)\IDASDK\plugins\ida_bochs_debugger\ida_impl_analysis\IdaWllHook.h" />
+    <ClInclude Include="$(SolutionDir)\IDASDK\plugins\ida_bochs_debugger\ida_impl_analysis\krnl32_hook.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <MASM Include="$(SolutionDir)\IDASDK\plugins\ida_bochs_debugger\ida_impl_analysis\stub.asm" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
     <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets" />

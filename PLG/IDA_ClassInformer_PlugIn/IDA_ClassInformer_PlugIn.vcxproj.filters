@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Support">
+      <UniqueIdentifier>{302243d9-f2ba-4146-a362-554dffb88f85}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Support\Custom UI">
+      <UniqueIdentifier>{c1f21fb8-7fe7-41c6-8d1f-ab4fcab55781}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources">
+      <UniqueIdentifier>{4bdd0563-c804-41ca-8070-1de11a54e3b4}</UniqueIdentifier>
+      <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+    <Filter Include="Doc">
+      <UniqueIdentifier>{0014c750-4f1a-4919-b393-c1f07d9ca63c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(SolutionDir)\IDASDK\plugins\classinformer\Core.h" />
+    <ClInclude Include="$(SolutionDir)\IDASDK\plugins\classinformer\RTCI.h" />
+    <ClInclude Include="$(SolutionDir)\IDASDK\plugins\classinformer\RTTI.h" />
+    <ClInclude Include="$(SolutionDir)\IDASDK\plugins\classinformer\StdAfx.h" />
+    <ClInclude Include="$(SolutionDir)\IDASDK\plugins\classinformer\Vftable.h" />
+    <ClInclude Include="$(SolutionDir)\IDASDK\plugins\classinformer\resource.h">
+      <Filter>Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="$(SolutionDir)\IDASDK\plugins\classinformer\ContainersInl.h">
+      <Filter>Support</Filter>
+    </ClInclude>
+    <ClInclude Include="$(SolutionDir)\IDASDK\plugins\classinformer\Utility.h">
+      <Filter>Support</Filter>
+    </ClInclude>
+    <ClInclude Include="$(SolutionDir)\IDASDK\plugins\classinformer\CustomUI\HelpURL.h">
+      <Filter>Support\Custom UI</Filter>
+    </ClInclude>
+    <ClInclude Include="$(SolutionDir)\IDASDK\plugins\classinformer\CustomUI\IDACustomCommon.h">
+      <Filter>Support\Custom UI</Filter>
+    </ClInclude>
+    <ClInclude Include="$(SolutionDir)\IDASDK\plugins\classinformer\CustomUI\SegmentSelectBox.h">
+      <Filter>Support\Custom UI</Filter>
+    </ClInclude>
+    <ClInclude Include="$(SolutionDir)\IDASDK\plugins\classinformer\CustomUI\WaitBoxEx.h">
+      <Filter>Support\Custom UI</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(SolutionDir)\IDASDK\plugins\classinformer\Core.cpp" />
+    <ClCompile Include="$(SolutionDir)\IDASDK\plugins\classinformer\Main.cpp" />
+    <ClCompile Include="$(SolutionDir)\IDASDK\plugins\classinformer\RTCI.cpp" />
+    <ClCompile Include="$(SolutionDir)\IDASDK\plugins\classinformer\RTTI.cpp" />
+    <ClCompile Include="$(SolutionDir)\IDASDK\plugins\classinformer\Vftable.cpp" />
+    <ClCompile Include="$(SolutionDir)\IDASDK\plugins\classinformer\Utility.cpp">
+      <Filter>Support</Filter>
+    </ClCompile>
+    <ClCompile Include="$(SolutionDir)\IDASDK\plugins\classinformer\CustomUI\SegmentSelectBox.cpp">
+      <Filter>Support\Custom UI</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="$(SolutionDir)\IDASDK\plugins\classinformer\Class_Informer.txt">
+      <Filter>Doc</Filter>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="$(SolutionDir)\IDASDK\plugins\classinformer\Resources\done1.wav">
+      <Filter>Resources</Filter>
+    </Media>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="$(SolutionDir)\IDASDK\plugins\classinformer\IDA_ClassInformer_PlugIn.rc">
+      <Filter>Resources</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>
