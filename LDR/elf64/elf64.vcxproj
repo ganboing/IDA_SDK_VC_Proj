@@ -48,7 +48,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="$(SolutionDir)\IDASDK\ldr\elf\reader.cpp" />
+    <ClCompile Include="$(SolutionDir)\IDASDK\ldr\elf\common.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
