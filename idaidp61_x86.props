@@ -19,7 +19,7 @@
     <Link>
       <AdditionalLibraryDirectories>$(SolutionDir)\IDASDK\lib\x86_win_vc_32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>ida.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalOptions>/STUB:"..\..\IDASDK\module\stub" %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>/STUB:"$(SolutionDir)\IDASDK\module\stub" %(AdditionalOptions)</AdditionalOptions>
       <BaseAddress>0x13000000</BaseAddress>
     </Link>
   </ItemDefinitionGroup>

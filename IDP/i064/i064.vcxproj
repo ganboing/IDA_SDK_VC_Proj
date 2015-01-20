@@ -24,7 +24,7 @@
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="..\..\idaidp61_ea64.props" />
+    <Import Project="$(SolutionDir)idaidp61_ea64.props" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -38,7 +38,7 @@
       <Optimization>Disabled</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;I064_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
     </ClCompile>
     <Link>
@@ -50,21 +50,21 @@
     <PostBuildEvent>
       <Command>copy /Y $(TargetDir)\$(TargetName).w64 z:\ana\
 copy /Y $(TargetDir)\$(TargetName).pdb z:\ana\
-copy /Y ..\..\IDASDK\module\i0\reg.cpp z:\ana\
-copy /Y ..\..\IDASDK\module\i0\out.cpp z:\ana\
-copy /Y ..\..\IDASDK\module\i0\ins.cpp z:\ana\
-copy /Y ..\..\IDASDK\module\i0\ana.cpp z:\ana\
-copy /Y ..\..\IDASDK\module\i0\emu.cpp z:\ana\
-copy /Y ..\..\IDASDK\module\i0\i0_instr.cpp z:\ana\</Command>
+copy /Y $(SolutionDir)\IDASDK\module\i064\reg.cpp z:\ana\
+copy /Y $(SolutionDir)\IDASDK\module\i064\out.cpp z:\ana\
+copy /Y $(SolutionDir)\IDASDK\module\i064\ins.cpp z:\ana\
+copy /Y $(SolutionDir)\IDASDK\module\i064\ana.cpp z:\ana\
+copy /Y $(SolutionDir)\IDASDK\module\i064\emu.cpp z:\ana\
+copy /Y $(SolutionDir)\IDASDK\module\i064\i0_instr.cpp z:\ana\</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\IDASDK\lib\i0_ida_common\i0_ida_common_lib.cpp" />
-    <ClCompile Include="..\..\IDASDK\module\i0\ana.cpp" />
-    <ClCompile Include="..\..\IDASDK\module\i0\emu.cpp" />
-    <ClCompile Include="..\..\IDASDK\module\i0\ins.cpp" />
-    <ClCompile Include="..\..\IDASDK\module\i0\out.cpp" />
-    <ClCompile Include="..\..\IDASDK\module\i0\reg.cpp" />
+    <ClCompile Include="$(SolutionDir)\IDASDK\lib\i0_ida_common\i0_ida_common_lib.cpp" />
+    <ClCompile Include="$(SolutionDir)\IDASDK\module\$(ProjectName)\ana.cpp" />
+    <ClCompile Include="$(SolutionDir)\IDASDK\module\$(ProjectName)\emu.cpp" />
+    <ClCompile Include="$(SolutionDir)\IDASDK\module\$(ProjectName)\ins.cpp" />
+    <ClCompile Include="$(SolutionDir)\IDASDK\module\$(ProjectName)\out.cpp" />
+    <ClCompile Include="$(SolutionDir)\IDASDK\module\$(ProjectName)\reg.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

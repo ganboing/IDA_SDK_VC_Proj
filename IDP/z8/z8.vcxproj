@@ -24,7 +24,7 @@
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="..\..\idaidp61_x86.props" />
+    <Import Project="$(SolutionDir)\idaidp61_x86.props" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -38,7 +38,7 @@
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;Z8_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -48,11 +48,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\IDASDK\module\z8\ana.cpp" />
-    <ClCompile Include="..\..\IDASDK\module\z8\emu.cpp" />
-    <ClCompile Include="..\..\IDASDK\module\z8\ins.cpp" />
-    <ClCompile Include="..\..\IDASDK\module\z8\out.cpp" />
-    <ClCompile Include="..\..\IDASDK\module\z8\reg.cpp" />
+    <ClCompile Include="$(SolutionDir)\IDASDK\module\$(ProjectName)\ana.cpp" />
+    <ClCompile Include="$(SolutionDir)\IDASDK\module\$(ProjectName)\emu.cpp" />
+    <ClCompile Include="$(SolutionDir)\IDASDK\module\$(ProjectName)\ins.cpp" />
+    <ClCompile Include="$(SolutionDir)\IDASDK\module\$(ProjectName)\out.cpp" />
+    <ClCompile Include="$(SolutionDir)\IDASDK\module\$(ProjectName)\reg.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

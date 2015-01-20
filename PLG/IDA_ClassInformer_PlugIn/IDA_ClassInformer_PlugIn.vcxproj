@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{22222222-2222-2222-2222-222222222222}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>IDA_ClassInformer_PlugIn</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120_xp</PlatformToolset>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(SolutionDir)\idaplg61_x86.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>Disabled</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>$(SolutionDir)\IDASDK\plugins\classinformer\CustomUI;$(SolutionDir)\IDASDK\plugins\classinformer;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>USE_DANGEROUS_FUNCTIONS;WIN32;NDEBUG;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <DisableSpecificWarnings>4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>Winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="$(SolutionDir)\IDASDK\plugins\classinformer\ContainersInl.h" />
+    <ClInclude Include="$(SolutionDir)\IDASDK\plugins\classinformer\Core.h" />
+    <ClInclude Include="$(SolutionDir)\IDASDK\plugins\classinformer\CustomUI\HelpURL.h" />
+    <ClInclude Include="$(SolutionDir)\IDASDK\plugins\classinformer\CustomUI\IDACustomCommon.h" />
+    <ClInclude Include="$(SolutionDir)\IDASDK\plugins\classinformer\CustomUI\SegmentSelectBox.h" />
+    <ClInclude Include="$(SolutionDir)\IDASDK\plugins\classinformer\CustomUI\WaitBoxEx.h" />
+    <ClInclude Include="$(SolutionDir)\IDASDK\plugins\classinformer\resource.h" />
+    <ClInclude Include="$(SolutionDir)\IDASDK\plugins\classinformer\RTCI.h" />
+    <ClInclude Include="$(SolutionDir)\IDASDK\plugins\classinformer\RTTI.h" />
+    <ClInclude Include="$(SolutionDir)\IDASDK\plugins\classinformer\StdAfx.h" />
+    <ClInclude Include="$(SolutionDir)\IDASDK\plugins\classinformer\Utility.h" />
+    <ClInclude Include="$(SolutionDir)\IDASDK\plugins\classinformer\Vftable.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(SolutionDir)\IDASDK\plugins\classinformer\Core.cpp" />
+    <ClCompile Include="$(SolutionDir)\IDASDK\plugins\classinformer\CustomUI\SegmentSelectBox.cpp" />
+    <ClCompile Include="$(SolutionDir)\IDASDK\plugins\classinformer\Main.cpp" />
+    <ClCompile Include="$(SolutionDir)\IDASDK\plugins\classinformer\RTCI.cpp" />
+    <ClCompile Include="$(SolutionDir)\IDASDK\plugins\classinformer\RTTI.cpp" />
+    <ClCompile Include="$(SolutionDir)\IDASDK\plugins\classinformer\Utility.cpp" />
+    <ClCompile Include="$(SolutionDir)\IDASDK\plugins\classinformer\Vftable.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="$(SolutionDir)\IDASDK\plugins\classinformer\Resources\done1.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="$(SolutionDir)\IDASDK\plugins\classinformer\IDA_ClassInformer_PlugIn.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="$(SolutionDir)\IDASDK\plugins\classinformer\Class_Informer.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
