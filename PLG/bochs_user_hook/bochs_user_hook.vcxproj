@@ -7,29 +7,29 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\IDASDK\plugins\bochs_user\BochsUserImplHook.cpp" />
-    <ClCompile Include="..\..\IDASDK\plugins\bochs_user\bochs_user.cpp" />
-    <ClCompile Include="..\..\IDASDK\plugins\bochs_user\DbgPrintf.cpp" />
-    <ClCompile Include="..\..\IDASDK\plugins\bochs_user\exception_clause.cpp" />
-    <ClCompile Include="..\..\IDASDK\plugins\bochs_user\HookIAT.cpp" />
-    <ClCompile Include="..\..\IDASDK\plugins\bochs_user\IdaWllHook.cpp" />
-    <ClCompile Include="..\..\IDASDK\plugins\bochs_user\krnl32_hook.cpp" />
+    <ClCompile Include="..\..\IDASDK\plugins\ida_bochs_debugger\ida_impl_analysis\BochsUserImplHook.cpp" />
+    <ClCompile Include="..\..\IDASDK\plugins\ida_bochs_debugger\ida_impl_analysis\bochs_user.cpp" />
+    <ClCompile Include="..\..\IDASDK\plugins\ida_bochs_debugger\ida_impl_analysis\DbgPrintf.cpp" />
+    <ClCompile Include="..\..\IDASDK\plugins\ida_bochs_debugger\ida_impl_analysis\exception_clause.cpp" />
+    <ClCompile Include="..\..\IDASDK\plugins\ida_bochs_debugger\ida_impl_analysis\HookIAT.cpp" />
+    <ClCompile Include="..\..\IDASDK\plugins\ida_bochs_debugger\ida_impl_analysis\IdaWllHook.cpp" />
+    <ClCompile Include="..\..\IDASDK\plugins\ida_bochs_debugger\ida_impl_analysis\krnl32_hook.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\IDASDK\plugins\bochs_user\asm_stub.h" />
-    <ClInclude Include="..\..\IDASDK\plugins\bochs_user\BochsUserImplHook.h" />
-    <ClInclude Include="..\..\IDASDK\plugins\bochs_user\DbgPrintf.h" />
-    <ClInclude Include="..\..\IDASDK\plugins\bochs_user\EnumToString.h" />
-    <ClInclude Include="..\..\IDASDK\plugins\bochs_user\exception_clause.h" />
-    <ClInclude Include="..\..\IDASDK\plugins\bochs_user\exception_clause_hooks.h" />
-    <ClInclude Include="..\..\IDASDK\plugins\bochs_user\global.h" />
-    <ClInclude Include="..\..\IDASDK\plugins\bochs_user\global_win.h" />
-    <ClInclude Include="..\..\IDASDK\plugins\bochs_user\HookIAT.h" />
-    <ClInclude Include="..\..\IDASDK\plugins\bochs_user\IdaWllHook.h" />
-    <ClInclude Include="..\..\IDASDK\plugins\bochs_user\krnl32_hook.h" />
+    <ClInclude Include="..\..\IDASDK\plugins\ida_bochs_debugger\ida_impl_analysis\asm_stub.h" />
+    <ClInclude Include="..\..\IDASDK\plugins\ida_bochs_debugger\ida_impl_analysis\BochsUserImplHook.h" />
+    <ClInclude Include="..\..\IDASDK\plugins\ida_bochs_debugger\ida_impl_analysis\DbgPrintf.h" />
+    <ClInclude Include="..\..\IDASDK\plugins\ida_bochs_debugger\ida_impl_analysis\EnumToString.h" />
+    <ClInclude Include="..\..\IDASDK\plugins\ida_bochs_debugger\ida_impl_analysis\exception_clause.h" />
+    <ClInclude Include="..\..\IDASDK\plugins\ida_bochs_debugger\ida_impl_analysis\exception_clause_hooks.h" />
+    <ClInclude Include="..\..\IDASDK\plugins\ida_bochs_debugger\ida_impl_analysis\global.h" />
+    <ClInclude Include="..\..\IDASDK\plugins\ida_bochs_debugger\ida_impl_analysis\global_win.h" />
+    <ClInclude Include="..\..\IDASDK\plugins\ida_bochs_debugger\ida_impl_analysis\HookIAT.h" />
+    <ClInclude Include="..\..\IDASDK\plugins\ida_bochs_debugger\ida_impl_analysis\IdaWllHook.h" />
+    <ClInclude Include="..\..\IDASDK\plugins\ida_bochs_debugger\ida_impl_analysis\krnl32_hook.h" />
   </ItemGroup>
   <ItemGroup>
-    <MASM Include="..\..\IDASDK\plugins\bochs_user\stub.asm" />
+    <MASM Include="..\..\IDASDK\plugins\ida_bochs_debugger\ida_impl_analysis\stub.asm" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{C997ED4F-1F5C-4867-AB8D-0DABCCDADA98}</ProjectGuid>
@@ -87,14 +87,14 @@
     <PostBuildEvent>
       <Command>copy /Y $(TargetDir)\$(TargetName).dll z:\backup\
 copy /Y $(TargetDir)\$(TargetName).pdb z:\backup\
-copy /Y ..\..\IDASDK\plugins\bochs_user\bochs_user.cpp z:\backup\bochs_user\bochs_user.cpp
-copy /Y ..\..\IDASDK\plugins\bochs_user\HookIAT.cpp z:\backup\bochs_user\HookIAT.cpp
-copy /Y ..\..\IDASDK\plugins\bochs_user\krnl32_hook.cpp z:\backup\bochs_user\krnl32_hook.cpp
-copy /Y ..\..\IDASDK\plugins\bochs_user\exception_clause.cpp z:\backup\bochs_user\exception_clause.cpp
-copy /Y ..\..\IDASDK\plugins\bochs_user\dbgprintf.cpp z:\backup\bochs_user\dbgprintf.cpp
-copy /Y ..\..\IDASDK\plugins\bochs_user\dbgprintf.h z:\backup\bochs_user\dbgprintf.h
-copy /Y ..\..\IDASDK\plugins\bochs_user\bochsUserImplHook.cpp z:\backup\bochs_user\bochsUserImplHook.cpp
-copy /Y ..\..\IDASDK\plugins\bochs_user\IdaWllHook.cpp z:\backup\bochs_user\IdaWllHook.cpp
+copy /Y ..\..\IDASDK\plugins\ida_bochs_debugger\ida_impl_analysis\bochs_user.cpp z:\backup\bochs_user_hook\bochs_user.cpp
+copy /Y ..\..\IDASDK\plugins\ida_bochs_debugger\ida_impl_analysis\HookIAT.cpp z:\backup\bochs_user_hook\HookIAT.cpp
+copy /Y ..\..\IDASDK\plugins\ida_bochs_debugger\ida_impl_analysis\krnl32_hook.cpp z:\backup\bochs_user_hook\krnl32_hook.cpp
+copy /Y ..\..\IDASDK\plugins\ida_bochs_debugger\ida_impl_analysis\exception_clause.cpp z:\backup\bochs_user_hook\exception_clause.cpp
+copy /Y ..\..\IDASDK\plugins\ida_bochs_debugger\ida_impl_analysis\dbgprintf.cpp z:\backup\bochs_user_hook\dbgprintf.cpp
+copy /Y ..\..\IDASDK\plugins\ida_bochs_debugger\ida_impl_analysis\dbgprintf.h z:\backup\bochs_user_hook\dbgprintf.h
+copy /Y ..\..\IDASDK\plugins\ida_bochs_debugger\ida_impl_analysis\bochsUserImplHook.cpp z:\backup\bochs_user_hook\bochsUserImplHook.cpp
+copy /Y ..\..\IDASDK\plugins\ida_bochs_debugger\ida_impl_analysis\IdaWllHook.cpp z:\backup\bochs_user_hook\IdaWllHook.cpp
 
 </Command>
     </PostBuildEvent>
