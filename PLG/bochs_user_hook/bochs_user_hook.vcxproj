@@ -57,22 +57,7 @@
       <AdditionalDependencies>Dbghelp.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
     </Link>
-    <PostBuildEvent>
-      <Command>copy /Y $(TargetDir)\$(TargetName).dll z:\backup\
-copy /Y $(TargetDir)\$(TargetName).pdb z:\backup\
-copy /Y $(SolutionDir)\IDASDK\plugins\ida_bochs_debugger\ida_impl_analysis\bochs_user.cpp z:\backup\bochs_user_hook\bochs_user.cpp
-copy /Y $(SolutionDir)\IDASDK\plugins\ida_bochs_debugger\ida_impl_analysis\HookIAT.cpp z:\backup\bochs_user_hook\HookIAT.cpp
-copy /Y $(SolutionDir)\IDASDK\plugins\ida_bochs_debugger\ida_impl_analysis\krnl32_hook.cpp z:\backup\bochs_user_hook\krnl32_hook.cpp
-copy /Y $(SolutionDir)\IDASDK\plugins\ida_bochs_debugger\ida_impl_analysis\exception_clause.cpp z:\backup\bochs_user_hook\exception_clause.cpp
-copy /Y $(SolutionDir)\IDASDK\plugins\ida_bochs_debugger\ida_impl_analysis\dbgprintf.cpp z:\backup\bochs_user_hook\dbgprintf.cpp
-copy /Y $(SolutionDir)\IDASDK\plugins\ida_bochs_debugger\ida_impl_analysis\dbgprintf.h z:\backup\bochs_user_hook\dbgprintf.h
-copy /Y $(SolutionDir)\IDASDK\plugins\ida_bochs_debugger\ida_impl_analysis\bochsUserImplHook.cpp z:\backup\bochs_user_hook\bochsUserImplHook.cpp
-copy /Y $(SolutionDir)\IDASDK\plugins\ida_bochs_debugger\ida_impl_analysis\IdaWllHook.cpp z:\backup\bochs_user_hook\IdaWllHook.cpp
-
-</Command>
-    </PostBuildEvent>
   </ItemDefinitionGroup>
-
   <ItemGroup>
     <ClCompile Include="$(SolutionDir)\IDASDK\plugins\ida_bochs_debugger\ida_impl_analysis\BochsUserImplHook.cpp" />
     <ClCompile Include="$(SolutionDir)\IDASDK\plugins\ida_bochs_debugger\ida_impl_analysis\bochs_user.cpp" />

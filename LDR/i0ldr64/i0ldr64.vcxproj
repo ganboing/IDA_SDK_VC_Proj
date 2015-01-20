@@ -46,12 +46,6 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
-    <PostBuildEvent>
-      <Command>copy /Y $(TargetDir)\$(TargetName).l64 z:\ana\
-copy /Y $(TargetDir)\$(TargetName).pdb z:\ana\
-copy /Y $(SolutionDir)\IDASDK\ldr\i0_ldr\i0_ldr.cpp z:\ana\
-copy /Y $(SolutionDir)\IDASDK\lib\i0_ida_common\i0_ida_common_lib.cpp z:\ana\</Command>
-    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="$(SolutionDir)\IDASDK\ldr\i0_ldr\i0_ldr.cpp" />
