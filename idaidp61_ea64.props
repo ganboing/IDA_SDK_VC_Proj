@@ -21,6 +21,9 @@
       <AdditionalOptions>/STUB:"$(SolutionDir)\IDASDK\module\stub" %(AdditionalOptions)</AdditionalOptions>
       <BaseAddress>0x13000000</BaseAddress>
     </Link>
+    <PostBuildEvent>
+      <Command>$(SolutionDir)\IDASDK\bin\util\mkidp\mkidp.exe $(TargetPath) $(IDP_DESCRIPTION)</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup />
 </Project>
