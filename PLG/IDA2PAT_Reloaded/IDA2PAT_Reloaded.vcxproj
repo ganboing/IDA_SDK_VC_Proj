@@ -49,9 +49,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\IDASDK\plugins\idb_2_pat_new\Core.cpp" />
-    <ClCompile Include="..\..\IDASDK\plugins\idb_2_pat_new\Main.cpp" />
-    <ClCompile Include="..\..\IDASDK\plugins\idb_2_pat_new\Utility.cpp" />
+    <ClCompile Include="$(SolutionDir)\IDASDK\plugins\idb_2_pat_new\Core.cpp" />
+    <ClCompile Include="$(SolutionDir)\IDASDK\plugins\idb_2_pat_new\Main.cpp" />
+    <ClCompile Include="$(SolutionDir)\IDASDK\plugins\idb_2_pat_new\Utility.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
