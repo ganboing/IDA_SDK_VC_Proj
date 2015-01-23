@@ -540,8 +540,6 @@ using ::std::nullptr_t;
 __declspec(dllimport) extern unsigned long  __cdecl __threadid(void);
 __declspec(dllimport) extern uintptr_t __cdecl __threadhandle(void);
 }
-ue || __has_nothrow_copy(_Ty)>
-	{	
 #pragma once
 extern "C" {
 __declspec(dllimport) const unsigned short * __cdecl __pctype_func(void);
@@ -2143,7 +2141,6 @@ using :: strtok; using :: strxfrm;
 }
 #pragma once
 #pragma once
-os(ea_t ea) { netnode(ea).supdel(27); }
 #pragma pack(push,8)
 extern "C" {
  __declspec(dllimport) wchar_t * __cdecl _wsetlocale(  int _Category,    const wchar_t * _Locale);
@@ -2289,7 +2286,6 @@ using :: wmemchr; using :: wmemcmp; using :: wmemcpy;
 using :: wmemmove; using :: wmemset; using :: wcsftime;
 }
 #pragma once
- == _S2.get());
 #pragma pack(push,8)
 extern "C" {
 typedef void *_HFILE;
@@ -10188,7 +10184,6 @@ unsigned char __lwpins32(unsigned int, unsigned int, unsigned int);
 unsigned char __lwpins64(unsigned __int64, unsigned int, unsigned int);
 };
 #pragma once
-)
 extern "C" {
 void _m_femms(void);
 __m64 _m_pavgusb(__m64, __m64);
