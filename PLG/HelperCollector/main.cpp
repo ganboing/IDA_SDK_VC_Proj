@@ -24,6 +24,8 @@
 #define __inline
 #define __forceinline
 
+int IDA_INCLUDE_BEGINS;
+
 #include <pro.h>
 #include <ida.hpp>
 #include <idp.hpp>
@@ -51,7 +53,6 @@
 #include <idd.hpp>
 #include <idp.hpp>
 #include <ieee.h>
-#include <intel.hpp>
 #include <ints.hpp>
 #include <kernwin.hpp>
 #include <lex.hpp>
