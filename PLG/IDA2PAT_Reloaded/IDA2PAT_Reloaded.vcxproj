@@ -33,6 +33,9 @@
     <ClCompile>
       <CallingConvention>StdCall</CallingConvention>
     </ClCompile>
+    <Link>
+      <AdditionalDependencies>Shlwapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="$(SolutionDir)\IDASDK\plugins\idb_2_pat_new\Core.cpp" />
