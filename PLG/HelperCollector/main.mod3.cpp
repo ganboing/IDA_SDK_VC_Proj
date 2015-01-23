@@ -24119,6 +24119,10 @@ template<class _Kty,
  #pragma warning(pop)
  #pragma pack(pop)
 int IDA_INCLUDE_BEGINS;
+
+#define class class __declspec(dllexport)
+#define struct struct __declspec(dllexport)
+
 #pragma pack(push, 4)
 typedef unsigned char  uchar;
 typedef unsigned short ushort;
@@ -27860,6 +27864,8 @@ public:
   bool analyzed_sp(void) const { return (flags & 0x00000400) != 0; }
   union
   {
+#pragma push_macro("struct")
+#undef struct
     struct
     {
       uval_t frame;
@@ -27885,6 +27891,7 @@ public:
       int refqty;
       ea_t *referers;
     };
+#pragma pop_macro("struct")
   };
 };
 template <> struct ida_movable_type<func_t> { typedef ida_true_type is_movable_type; };
