@@ -1,8 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
-MinimumVisualStudioVersion = 10.0.40219.1
+# Visual C++ Express 2010
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "mkidp", "ETC\mkidp\mkidp.vcxproj", "{E8B939BD-3708-4857-B5D4-BF0A508A3321}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "i064", "IDP\i064\i064.vcxproj", "{B0D7A1A7-63CD-48A7-8CD0-C1C312C0FE58}"
@@ -32,12 +30,6 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "bochs_user_hook", "PLG\bochs_user_hook\bochs_user_hook.vcxproj", "{C997ED4F-1F5C-4867-AB8D-0DABCCDADA98}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "win32_user", "PLG\win32_user\win32_user.vcxproj", "{A8791602-3A05-45D0-A22D-99C31CAC7810}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IDP", "IDP", "{BDB52656-E77C-49CF-B101-F89F2801D5A2}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LDR", "LDR", "{F8E3EF23-8871-4AD1-A741-ECE43B5360F3}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PLG", "PLG", "{B4F0E33E-B5D7-4EEB-972F-74532081AC57}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ida_bochs_debugger", "PLG\ida_bochs_debugger\ida_bochs_debugger.vcxproj", "{15168DCD-13C5-40DB-AD3F-911C07AF8133}"
 EndProject

@@ -5,4 +5,4 @@ IDASDK/
 */*/Debug/
 */*/Release/
 */*/*.vcxproj.user
-
+ipch/
