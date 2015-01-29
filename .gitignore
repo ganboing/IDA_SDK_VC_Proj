@@ -4,5 +4,7 @@ IDASDK/
 *.suo
 */*/Debug/
 */*/Release/
+*/*/Release_x86/
+*/*/Release_x64/
 */*/*.vcxproj.user
 

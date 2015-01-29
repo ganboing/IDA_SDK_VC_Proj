@@ -7,13 +7,13 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{0BFC8FAC-3298-4DFD-9612-A9D8BB3AEF29}</ProjectGuid>
+    <ProjectGuid>{856C6337-115B-4B8F-9B23-42365DD315B8}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>loadmap</RootNamespace>
+    <RootNamespace>graphslick_standalone</RootNamespace>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
-    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v100</PlatformToolset>
     <WholeProgramOptimization>false</WholeProgramOptimization>
@@ -24,22 +24,25 @@
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="$(SolutionDir)\idaplg61_common.props" />
-    <Import Project="$(SolutionDir)\idaplg61_x86.props" />
+    <Import Project="..\..\idaapp61_common.props" />
+    <Import Project="..\..\idaapp61_x86.props" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
       <Optimization>Disabled</Optimization>
       <OmitFramePointers>false</OmitFramePointers>
-      <CallingConvention>StdCall</CallingConvention>
-      <PreprocessorDefinitions>USE_DANGEROUS_FUNCTIONS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="$(SolutionDir)\IDASDK\plugins\$(ProjectName)\LOADMAP.CPP" />
-    <ClCompile Include="$(SolutionDir)\IDASDK\plugins\$(ProjectName)\MAPREAD.CPP" />
+    <ClCompile Include="..\..\..\idaplg_modules\graphslick\src\GraphSlick\groupman.cpp" />
+    <ClCompile Include="..\..\..\idaplg_modules\graphslick\src\GraphSlick\stdalone.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\idaplg_modules\graphslick\src\GraphSlick\groupman.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

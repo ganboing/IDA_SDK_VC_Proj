@@ -43,6 +43,10 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "IDA_ClassInformer_PlugIn", 
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "IDA2PAT_Reloaded", "PLG\IDA2PAT_Reloaded\IDA2PAT_Reloaded.vcxproj", "{139EE9A6-2762-4C8F-81A9-CD33574522C0}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "graphslick", "PLG\graphslick\graphslick.vcxproj", "{6A4C5A5F-E52A-44AE-954A-C810136E529D}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "graphslick_standalone", "PLG\graphslick_standalone\graphslick_standalone.vcxproj", "{856C6337-115B-4B8F-9B23-42365DD315B8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -105,6 +109,14 @@ Global
 		{139EE9A6-2762-4C8F-81A9-CD33574522C0}.Debug|Win32.Build.0 = Release|Win32
 		{139EE9A6-2762-4C8F-81A9-CD33574522C0}.Release|Win32.ActiveCfg = Release|Win32
 		{139EE9A6-2762-4C8F-81A9-CD33574522C0}.Release|Win32.Build.0 = Release|Win32
+		{6A4C5A5F-E52A-44AE-954A-C810136E529D}.Debug|Win32.ActiveCfg = Release_x86|Win32
+		{6A4C5A5F-E52A-44AE-954A-C810136E529D}.Debug|Win32.Build.0 = Release_x86|Win32
+		{6A4C5A5F-E52A-44AE-954A-C810136E529D}.Release|Win32.ActiveCfg = Release_x64|Win32
+		{6A4C5A5F-E52A-44AE-954A-C810136E529D}.Release|Win32.Build.0 = Release_x64|Win32
+		{856C6337-115B-4B8F-9B23-42365DD315B8}.Debug|Win32.ActiveCfg = Release|Win32
+		{856C6337-115B-4B8F-9B23-42365DD315B8}.Debug|Win32.Build.0 = Release|Win32
+		{856C6337-115B-4B8F-9B23-42365DD315B8}.Release|Win32.ActiveCfg = Release|Win32
+		{856C6337-115B-4B8F-9B23-42365DD315B8}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -127,5 +139,6 @@ Global
 		{15168DCD-13C5-40DB-AD3F-911C07AF8133} = {B4F0E33E-B5D7-4EEB-972F-74532081AC57}
 		{22222222-2222-2222-2222-222222222222} = {B4F0E33E-B5D7-4EEB-972F-74532081AC57}
 		{139EE9A6-2762-4C8F-81A9-CD33574522C0} = {B4F0E33E-B5D7-4EEB-972F-74532081AC57}
+		{6A4C5A5F-E52A-44AE-954A-C810136E529D} = {B4F0E33E-B5D7-4EEB-972F-74532081AC57}
 	EndGlobalSection
 EndGlobal
