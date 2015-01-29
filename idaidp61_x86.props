@@ -3,24 +3,11 @@
   <ImportGroup Label="PropertySheets" />
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
-    <IncludePath>$(SolutionDir)\IDASDK\include;$(IncludePath)</IncludePath>
     <TargetExt>.w32</TargetExt>
-    <OutDir>$(SolutionDir)\IDASDK\bin\procs\$(ProjectName)\$(Configuration)\</OutDir>
-    <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>
   <ItemDefinitionGroup>
-    <ClCompile>
-      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;__NT__;__IDP__;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
-      <CallingConvention>StdCall</CallingConvention>
-      <WarningLevel>Level4</WarningLevel>
-      <MultiProcessorCompilation>true</MultiProcessorCompilation>
-    </ClCompile>
     <Link>
       <AdditionalLibraryDirectories>$(SolutionDir)\IDASDK\lib\x86_win_vc_32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>ida.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalOptions>/STUB:"$(SolutionDir)\IDASDK\module\stub" %(AdditionalOptions)</AdditionalOptions>
-      <BaseAddress>0x13000000</BaseAddress>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup />
