@@ -18,11 +18,15 @@
 #include <map>
 #include <set>
 #include <math.h>
+#include <Windows.h>
 // IDA libs
 
 #define inline 
 #define __inline
 #define __forceinline
+
+#define struct struct __declspec(dllexport)
+#define class class __declspec(dllexport)
 
 int IDA_INCLUDE_BEGINS;
 
@@ -80,3 +84,15 @@ int IDA_INCLUDE_BEGINS;
 #include <va.hpp>
 #include <vm.hpp>
 #include <xref.hpp>
+
+#include <../ldr/pe/pe.h>
+#include <../ldr/pe/common.h>
+#include <../ldr/pe/common.cpp>
+
+#define ENABLE_LOWCNDS
+
+#include <debmod.h>
+#include <debmod.cpp>
+
+#include <pc_debmod.h>
+#include <pc_debmod.cpp>
