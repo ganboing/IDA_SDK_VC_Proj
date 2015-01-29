@@ -35,7 +35,7 @@
     <ClCompile Include="$(SolutionDir)\IDASDK\plugins\debugger\debmod.cpp" />
     <ClCompile Include="$(SolutionDir)\IDASDK\plugins\debugger\pc_debmod.cpp" />
     <ClCompile Include="$(SolutionDir)\IDASDK\plugins\debugger\win32_debmod.cpp" />
-    <ClCompile Include="$(SolutionDir)\IDASDK\plugins\debugger\win32_server_impl.cpp" />
+    <ClCompile Include="$(SolutionDir)\IDASDK\plugins\debugger\win32_server_stub.cpp" />
     <ClCompile Include="$(SolutionDir)\IDASDK\plugins\debugger\win32_user.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

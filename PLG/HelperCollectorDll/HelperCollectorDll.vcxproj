@@ -7,9 +7,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{B2EB8B7C-E6E3-4731-BB99-474C459A6F0F}</ProjectGuid>
+    <ProjectGuid>{DE73C202-DE39-4FA7-969B-82764892A4F4}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>pdb</RootNamespace>
+    <RootNamespace>HelperCollectorDll</RootNamespace>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
@@ -30,11 +30,19 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile />
+    <Link>
+      <OptimizeReferences>false</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Link>
+      <EnableCOMDATFolding>false</EnableCOMDATFolding>
+      <ForceFileOutput>UndefinedSymbolOnly</ForceFileOutput>
+    </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="$(SolutionDir)\IDASDK\plugins\pdb\old.cpp" />
-    <ClCompile Include="$(SolutionDir)\IDASDK\plugins\pdb\pdb.cpp" />
-    <ClCompile Include="$(SolutionDir)\IDASDK\plugins\pdb\pdbreg.cpp" />
+    <ClCompile Include="..\HelperCollector\main.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
