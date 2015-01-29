@@ -32,6 +32,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
       <CallingConvention>StdCall</CallingConvention>
+      <PreprocessorDefinitions>USE_DANGEROUS_FUNCTIONS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
